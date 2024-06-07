@@ -4,7 +4,8 @@ import Navbar from 'react-bootstrap/Navbar';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import temp_logo from '../assets/paper-airplane.png'
 import LogoutButton from './LogoutButton';
-import { useAuth } from './AuthContext';
+import { useAuth, AuthContextType } from './AuthContext';
+import React from 'react';
 
 const Navigation = () => {
 
@@ -14,11 +15,25 @@ const Navigation = () => {
       width: '100%'
     }
 
-  const { isAuthenticated, logout } = useAuth()
+    // const { isAuthenticated, logout }:AuthContextType = useAuth()
+
+    // Destructure isAuthenticated and logout, and specify their types using AuthContextType
+    const authData: AuthContextType | undefined = useAuth();
+
+    // Check if authData is defined before destructuring its properties
+    if (!authData) {
+      // Handle the case where useAuth() returns undefined
+      // For example, you can return null or display a loading spinner
+      return null; // or <LoadingSpinner />
+    }
+  
+    // Now you can safely destructure isAuthenticated and logout
+    const { isAuthenticated, logout } = authData;
+ 
 
     return (
         <div className='navbar-container'>
-          <Navbar expand="lg" className="bg-body-tertiary" fixed='top' style={{height:'10%', diplay:'flex', alignContent:'center', justifyContent:'space-evenly'}}>
+          <Navbar expand="lg" className="bg-body-tertiary" fixed='top' style={{height:'10%', display:'flex', alignContent:'center', justifyContent:'space-evenly'}}>
             <Container>
               {/* <Navbar.Brand href="/">
                 <img src={temp_logo} alt='logo' className="navbar-logo" style={{height:'85px', width:'170px'}}/>
