@@ -1,0 +1,70 @@
+@use './config';
+
+
+.App{
+    .navbar-container{
+        @include config.flexContainer(
+            100%,
+            10vh,
+            flex,
+            center,
+            space-evenly,
+            nowrap
+        );
+    
+        nav{
+            font-size: config.$font-size-nav;
+            font-weight: config.$font-weight-nav;
+            font-family: config.$font-family-nav;
+    
+            .container{
+                @include config.container(100%);
+    
+                #basic-navbar-nav {
+                    display: block;
+                    overflow: hidden;
+                    height: 90%;
+    
+                    .navbar-nav{
+                        .navbar-brand{
+                            .navbar-logo {
+                                @include config.logoControl(
+                                    auto,
+                                    100%,
+                                    170px
+                                )
+                            }
+                        }
+    
+                        .nav-link{
+                            @include config.marginControl(
+                                0.5em,
+                                1em,
+                                0.5em,
+                                1em
+                            ){
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
+                    }
+                }                             
+            }
+        }
+    }
+    
+    .slide{
+        .carousel-inner{
+            .carousel-item{
+                .carousel-caption{
+                    .home-text{
+                        @include config.text-style(
+                            white,
+                            config.$text-shadow1
+                        )
+                    }
+                }
+            }
+        }
+    }
+}

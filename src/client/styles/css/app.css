@@ -1,0 +1,59 @@
+.App .navbar-container {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+}
+.App .navbar-container nav {
+  font-size: larger;
+  font-weight: bolder;
+  font-family: "Courier New", Courier, monospace;
+}
+.App .navbar-container nav .container {
+  height: 100%;
+}
+.App .navbar-container nav .container #basic-navbar-nav {
+  display: block;
+  overflow: hidden;
+  height: 90%;
+}
+.App .navbar-container nav .container #basic-navbar-nav .navbar-nav .navbar-brand .navbar-logo {
+  height: auto;
+  width: 100%;
+  max-width: 170px;
+}
+.App .navbar-container nav .container #basic-navbar-nav .navbar-nav .nav-link {
+  margin-top: 0.5em;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+  display: flex;
+  align-items: center;
+}
+.App .slide .carousel-inner .carousel-item .carousel-caption .home-text {
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.App .create {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 5vh;
+}
+
+.App {
+  text-align: center;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=app.css.map */

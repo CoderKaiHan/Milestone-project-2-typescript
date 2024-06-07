@@ -1,0 +1,45 @@
+
+$text-align-app: center;
+$font-size-nav:larger;
+$font-weight-nav:bolder;
+$font-family-nav: 'Courier New', Courier, monospace;
+$font-family-NavDropdown: 'Courier New', Courier, monospace;
+$text-shadow1: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+
+
+@mixin flexContainer($width,$height,$display,$items,$justify,$wrap) {
+    width:$width;
+    height:$height;
+    display: flex;
+    align-items: $items;
+    justify-content: $justify;
+    flex-wrap:$wrap;
+}
+
+@mixin container ($height){
+    height: $height;
+}
+
+@mixin marginControl ($top, $right, $bottom, $left){
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+    @content
+}
+
+@mixin logoControl ($height, $width, $max-width){
+    height:$height;
+    width:$width;
+    max-width:$max-width;
+}
+
+@mixin aTagControl ($text-deco){
+    text-decoration: $text-deco;
+}
+
+@mixin text-style ($color,$text-shadow){
+    color:$color;
+    text-shadow:$text-shadow;
+}

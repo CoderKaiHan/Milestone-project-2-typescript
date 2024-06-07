@@ -1,0 +1,12 @@
+@use './config';
+@use './home';
+@use './create';
+
+.App {
+    text-align: config.$text-align-app;
+    height: 100%;
+}
+
+a {
+    @include config.aTagControl(none)
+}

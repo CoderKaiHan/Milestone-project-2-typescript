@@ -1,0 +1,16 @@
+@use './config';
+
+.App{
+    .create{
+        @include config.flexContainer(
+            100%,
+            100vh,
+            flex,
+            flex-start,
+            center,
+            wrap
+        );
+
+        padding-top:5vh;
+    }
+}
